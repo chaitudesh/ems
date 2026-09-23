@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+body {
+  color: #0f172a;
+  background-color: #f4f4f5;
+  background-image: 
+    radial-gradient(circle at 0% 0%, rgba(224, 231, 255, 1) 0%, transparent 40%),
+    radial-gradient(circle at 100% 0%, rgba(252, 231, 243, 1) 0%, transparent 40%),
+    radial-gradient(circle at 100% 100%, rgba(224, 242, 254, 1) 0%, transparent 40%),
+    radial-gradient(circle at 0% 100%, rgba(243, 232, 255, 1) 0%, transparent 40%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Custom glassy container utility classes */
+.glass-panel {
+  @apply bg-white/80 backdrop-blur-2xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-2xl;
+}
+
+.glass-card {
+  @apply bg-white/70 backdrop-blur-xl border border-white/80 shadow-[0_4px_20px_rgb(0,0,0,0.03)] rounded-2xl hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] transition-all duration-300 hover:bg-white/90 hover:-translate-y-1;
+}
+
+.glass-table {
+  @apply bg-white/80 backdrop-blur-xl border border-white/60 shadow-[0_4px_20px_rgb(0,0,0,0.03)] rounded-2xl overflow-x-auto;
+}
+
+.btn-primary {
+  @apply bg-slate-900 text-white font-medium shadow-[0_4px_10px_rgb(15,23,42,0.2)] hover:bg-slate-800 hover:shadow-[0_6px_15px_rgb(15,23,42,0.3)] transform hover:-translate-y-0.5 transition-all duration-200 active:scale-95;
+}
