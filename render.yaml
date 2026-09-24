@@ -2,6 +2,7 @@ services:
   - type: web
     name: ems-backend
     runtime: docker
+    plan: free
     rootDir: backend
     envVars:
       - key: APP_KEY
