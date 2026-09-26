@@ -30,7 +30,8 @@ class UserController extends Controller
             'password' => bcrypt($validated['password']),
             'department_id' => $validated['department_id'],
         ]);
-        $user->assignRole($validated['role']);
+        $role = \Spatie\Permission\Models\Role::findByName($validated['role'], 'web');
+        $user->assignRole($role);
 
         return response()->json($user, 201);
     }
